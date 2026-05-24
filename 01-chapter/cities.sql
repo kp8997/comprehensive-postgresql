@@ -11,3 +11,7 @@ values
     ('Los Angeles', 'USA', 3900000, 1302),
     ('London', 'UK', 8900000, 1572),
     ('Tokyo', 'Japan', 13900000, 2194);
+
+-- query with custom column and custom column name with 'as'
+
+select concat(name, ' in ', country) as full_location from cities;
