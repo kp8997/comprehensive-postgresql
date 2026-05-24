@@ -4,3 +4,11 @@ create table cities (
     population INTEGER,
     area INTEGER
 );
+
+insert into cities 
+values
+    ('New York', 'USA', 8400000, 1214),
+    ('Los Angeles', 'USA', 3900000, 1302),
+    ('London', 'UK', 8900000, 1572),
+    ('Tokyo', 'Japan', 13900000, 2194);
+    
