@@ -155,3 +155,9 @@ VALUES
         ('Occaecati eos possimus deleniti itaque aliquam accusamus.', 3, 4),
         ('Molestiae officia architecto eius nesciunt.', 5, 4),
         ('Minima dolorem reiciendis excepturi culpa sapiente eos deserunt ut.', 3, 3);
+
+SELECT COUNT(*) FROM users;
+
+SELECT COUNT(*) FROM photos;
+
+SELECT COUNT(*) FROM comments;
