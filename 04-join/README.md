@@ -6,7 +6,7 @@ AS keyword for variable of table or column name
 
 INNER JOIN (Default) shorthand will be JOIN
 
-OUTER JOIN 
+FULL JOIN 
 
 LEFT JOIN
 
