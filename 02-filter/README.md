@@ -1,0 +1,1 @@
+Select with where consition <>; =; >; <; <=; >=; BETWEEN ... AND ...; IN (...), LIKE, NOT LIKE, IS NULL, IS NOT NULL, NOT BETWEEN ... AND ...; NOT IN (...)
