@@ -51,6 +51,7 @@ VALUES
         ('https://tyrique.info', 4),
         ('http://buddy.info', 5),
         ('https://elinore.name', 2),
+        ('https://santina.net', null)
         ('http://sasha.com', 3);
  
 INSERT INTO comments (contents, user_id, photo_id)
@@ -154,6 +155,7 @@ VALUES
         ('Debitis repellendus inventore omnis est facere aliquam.', 3, 3),
         ('Occaecati eos possimus deleniti itaque aliquam accusamus.', 3, 4),
         ('Molestiae officia architecto eius nesciunt.', 5, 4),
+        ('Minima dolorem reiciendis excepturi culpa sapiente eos deserunt ut.', NULL, NULL)
         ('Minima dolorem reiciendis excepturi culpa sapiente eos deserunt ut.', 3, 3);
 
 SELECT COUNT(*) FROM users;
