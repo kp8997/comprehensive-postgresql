@@ -7,3 +7,5 @@
 * normal select will treat as the big group (no group by clause) so that can be used with aggregate functions
 
 * id is always implicitly added to group clause
+
+* COUNT(*) often use (mean will count null value as well)
