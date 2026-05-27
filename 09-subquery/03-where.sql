@@ -19,7 +19,6 @@ where department NOT IN (
 );
 
 -- show the name, department, price of product that have price greater than max price of product in Industrial department
-
 SELECT name, department, price FROM products
 WHERE price > (
     SELECT MAX(price) FROM products
@@ -27,9 +26,15 @@ WHERE price > (
 );
 
 -- alternative
-
 SELECT name, department, price FROM products
 WHERE price > ALL (
+    SELECT price FROM products
+    WHERE department = 'Industrial'
+);
+
+-- show the name, department, price of product that have price greater than at least one product in Industrial department
+SELECT name, department, price FROM products
+WHERE price > SOME (
     SELECT price FROM products
     WHERE department = 'Industrial'
 );
