@@ -12,7 +12,3 @@ Understand the select query that will return 3 kinds of dataset
     -- select id from users where id = 1;
 
     -- select COUNT(*) from users;
-
-    4. one row, many column (not common in real world, but we should understand)
-
-    -- select * from users where id = 1;
