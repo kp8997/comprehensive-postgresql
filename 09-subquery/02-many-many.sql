@@ -5,7 +5,7 @@ FROM (
 WHERE price_weight_ratio > 5;
 
 -- Average number of order per user of all users
-SELECT AVG(num_orders) from (
-    SELECT user_id, COUNT(*) as num_orders from orders
+SELECT AVG(num_orders) FROM (
+    SELECT COUNT(*) as num_orders FROM orders
     GROUP BY user_id
 );
