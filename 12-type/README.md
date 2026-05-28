@@ -1,17 +1,21 @@
 Majortype
 
     1. Number
+        <!-- Anything need to store at number field without decimal -->
         * smallint
         * integer
         * bigint
 
-        * smallserial
+        <!-- Auto increment - Id usage -->
+        * smallserial 
         * serial
         * bigserial
 
+        <!-- Use for acculate precision (money, currency, financial, scientific calculation) -->
         * decimal
         * numeric
-
+        
+        <!-- Use for approximate precision (engineering, physics measurement, product weight, size, etc.) -->
         * real
         * double precision
         * float
@@ -42,4 +46,4 @@ Majortype
             '2022-01-01 12:00:00+10'::timestamp with timezone
 
         * interval (like duration of time)
-            '1 D 2 H 3 M 4 S'::INTERVAL
+            '1W 1 D 2 H 3 M 4 S'::INTERVAL
