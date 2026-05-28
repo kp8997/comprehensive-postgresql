@@ -6,12 +6,10 @@ CREATE DATABASE validation;
 
 CREATE TABLE products (
     id SERIAL PRIMARY KEY,
-    name VARCHAR(100),
-    price INTEGER,
-    weight INTEGER,
+    name VARCHAR(100) NOT NULL,
+    price INTEGER DEFAULT 0,
+    weight INTEGER NOT NULL,
     department VARCHAR(50)
-    -- CONSTRAINT price_check CHECK (price > 0),
-    -- CONSTRAINT weight_check CHECK (weight > 0)
 );
 
 INSERT INTO products (name, department, price, weight) VALUES ('Shirt', 'Clothes', 20, 1);
