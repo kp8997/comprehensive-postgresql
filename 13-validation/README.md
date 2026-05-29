@@ -21,4 +21,5 @@
             add constain: foreign, primary, check, unique
             set not null
 
-4. 
+4. multiple unique will behave exact as composite key, only throw error when values of 2 fields are the same
+    
