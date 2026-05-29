@@ -1,2 +1,2 @@
 ALTER TABLE products
-ADD CONSTRAINT uq_products_name UNIQUE(name);
+ADD CONSTRAINT products_name_uq UNIQUE(name);
