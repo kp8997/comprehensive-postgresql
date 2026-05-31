@@ -1,0 +1,29 @@
+-- 5
+SELECT COALESCE(5, NULL);
+
+-- 0
+SELECT COALESCE(0, NULL);
+
+-- 1
+SELECT COALESCE(1, NULL);
+
+-- 0
+SELECT COALESCE(NULL, 0);
+
+-- 1
+SELECT COALESCE(NULL, 1);
+
+-- 0
+SELECT COALESCE(0, 1);
+
+-- 0
+SELECT COALESCE(NULL::BOOLEAN::INTEGER, 0);
+
+-- 10
+SELECT COALESCE(NULL::BOOLEAN::INTEGER, 10);
+
+-- either post_id or comment_id must be either null or not null
+ALTER TABLE reacts ADD CHECK (
+    COALESCE(post_id::BOOLEAN::INTEGER, 0) + 
+    COALESCE(comment_id::BOOLEAN::INTEGER, 0)
+) = 1;
