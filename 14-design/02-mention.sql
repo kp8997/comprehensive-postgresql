@@ -1,7 +1,14 @@
 CREATE TABLE users(
     id SERIAL PRIMARY KEY,
     username VARCHAR(50),
-    password VARCHAR(255)
+    password VARCHAR(50),
+    created_at TIMESTAMP DEFAULT NOW(),
+    updated_at TIMESTAMP DEFAULT NOW(),
+    bio VARCHAR(400),
+    avatar VARCHAR(200),
+    phone_number VARCHAR(25),
+    email VARCHAR(40),
+    status VARCHAR(15)
 )
 
 CREATE TABLE posts (

@@ -8,5 +8,4 @@ CREATE TABLE post_hashtags (
     id SERIAL PRIMARY KEY,
     post_id INTEGER REFERENCES posts(id) ON DELETE CASCADE,
     hashtag_id INTEGER REFERENCES hashtags(id) ON DELETE CASCADE,
-    created_at TIMESTAMP DEFAULT NOW()
 );
