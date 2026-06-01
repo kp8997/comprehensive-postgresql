@@ -62,3 +62,4 @@ CREATE TABLE caption_tags (
     post_id INTEGER REFERENCES posts(id) ON DELETE CASCADE,
     created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
 );
+
