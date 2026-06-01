@@ -1,8 +1,8 @@
 DROP DATABASE IF EXISTS validation;
 
-CREATE DATABASE validation;
+CREATE DATABASE comprehensive_postgresql_validation;
 
-\c validation
+\c comprehensive_postgresql_validation;
 
 CREATE TABLE products (
     id SERIAL PRIMARY KEY,

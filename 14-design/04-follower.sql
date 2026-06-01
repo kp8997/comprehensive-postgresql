@@ -1,7 +1,7 @@
 CREATE TABLE followers (
     leader_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
     follower_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
-    created_at TIMESTAMP DEFAULT NOW(),
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     PRIMARY KEY (leader_id, follower_id)
 );
 
