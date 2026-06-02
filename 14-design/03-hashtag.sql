@@ -6,6 +6,7 @@ CREATE TABLE hashtags (
 
 CREATE TABLE post_hashtags (
     id SERIAL PRIMARY KEY,
-    post_id INTEGER REFERENCES posts(id) ON DELETE CASCADE,
-    hashtag_id INTEGER REFERENCES hashtags(id) ON DELETE CASCADE,
+    post_id INTEGER NOT NULL REFERENCES posts(id) ON DELETE CASCADE,
+    hashtag_id INTEGER NOT NULL REFERENCES hashtags(id) ON DELETE CASCADE,
+    UNIQUE(post_id, hashtag_id)
 );
