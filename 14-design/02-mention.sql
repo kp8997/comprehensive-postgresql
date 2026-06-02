@@ -20,13 +20,13 @@ CREATE TABLE users(
 
 CREATE TABLE posts (
     id SERIAL PRIMARY KEY,
-    user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
+    user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
     caption VARCHAR(255),
     url VARCHAR(255),
     created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
-    lat REAL,
-    lng REAL
+    lat REAL CHECK(lat IS NULL OR (lat >= -90 AND lat <= 90)),
+    lng REAL CHECK(lng IS NULL OR (lng >= -180 AND lng <= 180))
 );
 
 CREATE TABLE comments (
