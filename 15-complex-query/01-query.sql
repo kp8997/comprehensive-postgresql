@@ -13,3 +13,4 @@ SELECT u.username, COUNT(*) as num_posts_liked FROM users u
 JOIN likes l ON l.user_id = u.id
 GROUP BY u.username
 ORDER BY num_posts_liked DESC;
+
