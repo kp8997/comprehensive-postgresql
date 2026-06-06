@@ -5,3 +5,5 @@ we can query metadata about data in database like:
     4. heap (data file), tuple (row), block (page)
     
 We can create index for column to fast retrieve via block and index mechanism
+
+Benchmark before and after applying index
