@@ -3,5 +3,5 @@ we can query metadata about data in database like:
     2. information about database between raw one and informative one
     3. metadata of every database like: oid, datname
     4. heap (data file), tuple (row), block (page)
-
     
+We can create index for column to fast retrieve via block and index mechanism
