@@ -7,3 +7,8 @@ We can query metadata about data in database like:
 We can create index for column to fast retrieve via block and index mechanism
 
 Benchmark before and after applying index with EXPLAIN ANALYZE
+
+Downside: if we create index for every columns of every tables
+    1. it will be slower when insert/update/delete/ due to need to update index as well
+    2. consume space for index file
+    3. index is not actually used
