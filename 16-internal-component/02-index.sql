@@ -6,3 +6,6 @@ EXPLAIN ANALYZE SELECT * FROM users WHERE username = 'Emil30';
 SELECT pg_size_pretty(pg_relation_size('users_username_idx'));
 
 SELECT pg_size_pretty(pg_relation_size('users'));
+
+-- index heap file
+SELECT relname, relkind FROM pg_class WHERE relkind = 'i';
