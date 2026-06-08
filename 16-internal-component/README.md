@@ -13,6 +13,18 @@ Downside: if we create index for every columns of every tables
     2. consume space for index file
     3. index is not actually used
 
+Inside the index heap file
+    root node and its direct children is page 3 (pg_page_items('users_username_idx', 3))
+    the first node of other page is routing node (x, 1) has no data and point to the first node of next page. E.g
+        pg_page_items('users_username_idx', 1)
+            (82,1) data: 'Alyson.Romaguera57
+        pg_page_items('users_username_idx', 2)
+            (101,1) data: Austin_Rath
+            (82,30) data: 'Alyson.Romaguera57
+        pg_page_items('users_username_idx', 4)
+            (70,1) data: Brown.Barton
+            (101,5) data: Austin_Rath
+
 ---------
 My own statement for mechanism of stored file;
 
