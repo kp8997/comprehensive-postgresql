@@ -16,5 +16,5 @@ CREATE EXTENSION pageinspect;
 -- query meta data about page of index file
 SELECT * FROM bt_metap('users_username_idx');
 
--- query data index tree with leaf
+-- query data index tree with root node on page 3
 SELECT * FROM bt_page_items('users_username_idx', 3);
