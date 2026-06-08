@@ -13,7 +13,6 @@ Downside: if we create index for every columns of every tables
     2. consume space for index file
     3. index is not actually used
 
-
 ---------
 My own statement for mechanism of stored file;
 
