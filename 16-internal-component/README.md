@@ -26,4 +26,3 @@ there are many blocks, each blocks contain many tuples (rows) and some data of t
     5. Special Section for linking before and after sibling of the current block    
     
 A index file also has similar structure with heap file (called leaf node), but inside instead of tuples is data, it stores index of tuple in heap file called ctid (block_id, index_number). Index number point to Line pointers/offset section in heap file. And line pointers point to the real data of the row
-
