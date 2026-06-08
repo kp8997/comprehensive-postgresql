@@ -24,6 +24,11 @@ Inside the index heap file
         pg_page_items('users_username_idx', 4)
             (70,1) data: Brown.Barton
             (101,5) data: Austin_Rath
+        pg_page_items('users_username_idx', 1)
+            (1,0) empty
+            (2,1) data: 'Alyson.Romaguera57
+            (4,1) data: Austin_Rath
+            
 
 ---------
 My own statement for mechanism of stored file;
