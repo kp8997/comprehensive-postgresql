@@ -13,4 +13,8 @@ SELECT relname, relkind FROM pg_class WHERE relkind = 'i';
 -- extension to query page inside index file
 CREATE EXTENSION pageinspect;
 
+-- query meta data about page of index file
 SELECT * FROM bt_metap('users_username_idx');
+
+-- query data index tree with leaf
+SELECT * FROM bt_page_items('users_username_idx', 3);
