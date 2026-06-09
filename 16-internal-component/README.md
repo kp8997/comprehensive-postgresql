@@ -29,6 +29,7 @@ Inside the index heap file
             (2,1) data: 'Alyson.Romaguera57
             (4,1) data: Austin_Rath
             
+We can also query the most common metadata about a single table by pg_stats and tablename
 
 ---------
 My own statement for mechanism of stored file;
