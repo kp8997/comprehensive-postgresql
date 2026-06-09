@@ -11,4 +11,3 @@ JOIN comments ON users.id = comments.user_id
 WHERE username = 'Alyson14';
 
 SELECT * FROM pg_stats WHERE tablename = 'users';
- 

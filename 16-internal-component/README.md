@@ -39,6 +39,8 @@ How the costs are calculated when explain:
     cpu_index_tuple_cost	    0.005	        CPU effort required to process a single index entry during a scan.
     cpu_operator_cost	        0.0025	        CPU effort to evaluate an operator or function (e.g., in a WHERE clause).
 
+If the count result is more than 70% postgresql will choose to seq scan instead of index scan, because the cost of random block and its tuple are large.
+
 ---------
 My own statement for mechanism of stored file;
 
