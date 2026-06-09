@@ -31,6 +31,14 @@ Inside the index heap file
             
 We can also query the most common metadata about a single table by pg_stats and tablename
 
+How the costs are calculated when explain:
+    Parameter                   Default Cost    What it Measures
+    seq_page_cost	            1.0	            Disk fetch cost for a single page sequentially.
+    random_page_cost	        4.0	            Disk fetch cost for a single page non-sequentially (random I/O).
+    cpu_tuple_cost	            0.01	        CPU effort required to process a single row (tuple).
+    cpu_index_tuple_cost	    0.005	        CPU effort required to process a single index entry during a scan.
+    cpu_operator_cost	        0.0025	        CPU effort to evaluate an operator or function (e.g., in a WHERE clause).
+
 ---------
 My own statement for mechanism of stored file;
 
