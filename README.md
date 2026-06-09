@@ -1,3 +1,7 @@
+With as alias_name ( 
+	query
+)
+
 Select
 	(function + column) column as alias
 	aggregate
