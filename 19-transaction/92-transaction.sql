@@ -1,5 +1,9 @@
-BEGIN
+BEGIN;
 
-END
+UPDATE accounts
+SET balance = balance - 10
+WHERE name = 'Gia';
 
-COMMIT
+SELECT * FROM accounts;
+
+COMMIT;

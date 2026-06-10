@@ -8,6 +8,6 @@ INSERT INTO accounts (id, name, balance)
 VALUES 
     (1, 'Alice', 100),
     (2, 'Bob', 100),
-    (3, 'Charlie', 300);
+    (3, 'Gia', 300);
 
 SELECT * FROM accounts;
