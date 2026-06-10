@@ -8,3 +8,4 @@ The main purpose of it is reusable E.g:
     => From that we should create a view of the most 10 recent posts for reusable
 
 Materialized view is the view but the result is stored in the database. So it is faster to query but it is not real-time.
+Remember to add *WITH DATA* as the end of the clause to trigger the execution
