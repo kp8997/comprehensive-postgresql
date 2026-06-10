@@ -4,3 +4,11 @@ CREATE VIEW tags AS
     SELECT id, created_at, user_id, post_id, 'caption_tag' AS type FROM caption_tags;
 
 SELECT * FROM tags;
+
+CREATE VIEW recent_posts AS (
+    SELECT * from posts
+    ORDER BY created_at DESC
+    LIMIT 10
+) ;
+
+SELECT * FROM recent_posts;
