@@ -6,3 +6,5 @@ The main purpose of it is reusable E.g:
     5. show the average number of comments on 10 most recent posts received
     6. show the hashtags used by the most 10 recent posts.
     => From that we should create a view of the most 10 recent posts for reusable
+
+Materialized view is the view but the result is stored in the database. So it is faster to query but it is not real-time.
