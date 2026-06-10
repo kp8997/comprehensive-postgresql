@@ -9,6 +9,14 @@ CREATE VIEW recent_posts AS (
     SELECT * from posts
     ORDER BY created_at DESC
     LIMIT 10
-) ;
+);
 
 SELECT * FROM recent_posts;
+
+CREATE OR REPLACE VIEW recent_posts AS (
+    SELECT * from posts
+    ORDER BY created_at DESC
+    LIMIT 15
+);
+
+DROP VIEW recent_posts;
