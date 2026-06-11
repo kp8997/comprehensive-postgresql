@@ -11,4 +11,4 @@ Installation
         npm init -y
         npm install node-pg-migrate pg
         update package.json for migrate script
-        run DATABASE_URL=... npm run migrate up
+        run DATABASE_URL=... npm run migrate up/down

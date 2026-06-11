@@ -1,5 +1,5 @@
 flyway.url=jdbc:postgresql://localhost:5432/comprehensive-postgresql-social-network
-flyway.user=admin_user
+flyway.user=admin_migration
 flyway.password=
 
 # default is public, just to make sure clearly
