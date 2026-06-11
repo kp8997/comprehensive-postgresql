@@ -1,0 +1,8 @@
+flyway.url=jdbc:postgresql://localhost:5432/comprehensive-postgresql-social-network
+flyway.user=admin_user
+flyway.password=
+
+# default is public, just to make sure clearly
+flyway.schemas=public
+
+flyway.locations=filesystem:./sql

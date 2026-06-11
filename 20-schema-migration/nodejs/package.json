@@ -1,0 +1,15 @@
+{
+  "name": "20-schema-migration",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "node-pg-migrate": "^8.0.4",
+    "pg": "^8.21.0"
+  }
+}
