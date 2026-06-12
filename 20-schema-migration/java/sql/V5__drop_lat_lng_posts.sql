@@ -1,0 +1,1 @@
+ALTER TABLE posts DROP COLUMN lat, DROP COLUMN lng;
