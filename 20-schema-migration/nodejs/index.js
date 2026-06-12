@@ -1,10 +1,10 @@
-const express = require('express');
-const pg = require('pg');
+const express = require("express");
+const pg = require("pg");
 
 const pool = new pg.Pool({
-  host: 'localhost',
+  host: "localhost",
   port: 5432,
-  database: 'comprehensive-postgresql-social-network',
+  database: "comprehensive-postgresql-social-network",
   user: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
 });
@@ -12,7 +12,7 @@ const pool = new pg.Pool({
 const app = express();
 app.use(express.urlencoded({ extended: true }));
 
-app.get('/posts', async (req, res) => {
+app.get("/posts", async (req, res) => {
   const { rows } = await pool.query(`
     SELECT * FROM posts;
   `);
@@ -22,8 +22,7 @@ app.get('/posts', async (req, res) => {
       <thead>
         <tr>
           <th>id</th>
-          <th>lng</th>
-          <th>lat</th>
+          <th>loc</th>
         </tr>
       </thead>
       <tbody>
@@ -32,12 +31,11 @@ app.get('/posts', async (req, res) => {
         return `
             <tr>
               <td>${row.id}</td>
-              <td>${row.lng}</td>
-              <td>${row.lat}</td>
+              <td>${row.loc}</td>
             </tr>
           `;
       })
-      .join('')}
+      .join("")}
       </tbody>
     </table>
     <form method="POST">
@@ -55,15 +53,22 @@ app.get('/posts', async (req, res) => {
   `);
 });
 
-app.post('/posts', async (req, res) => {
+app.post("/posts", async (req, res) => {
   const { lng, lat } = req.body;
 
   // await pool.query('INSERT INTO posts (lat, lng) VALUES ($1, $2);', [lat, lng]);
-  await pool.query('INSERT INTO posts (lat, lng, loc) VALUES ($1, $2, $3);', [lat, lng, `(${lng}, ${lat})`]);
+  // await pool.query("INSERT INTO posts (lat, lng, loc) VALUES ($1, $2, $3);", [
+  //   lat,
+  //   lng,
+  //   `(${lng}, ${lat})`,
+  // ]);
+  await pool.query("INSERT INTO posts (loc) VALUES ($1);", [
+    `(${lng}, ${lat})`,
+  ]);
 
-  res.redirect('/posts');
+  res.redirect("/posts");
 });
 
 app.listen(3005, () => {
-  console.log('Listening on port 3005');
+  console.log("Listening on port 3005");
 });
