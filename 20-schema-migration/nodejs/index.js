@@ -5,8 +5,8 @@ const pool = new pg.Pool({
   host: 'localhost',
   port: 5432,
   database: 'comprehensive-postgresql-social-network',
-  user: 'admin_migration',
-  password: 'p@ssw0rd123',
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
 });
 
 const app = express();
