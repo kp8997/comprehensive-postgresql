@@ -11,8 +11,12 @@ class UserRepo {
 
     }
 
-    static async findById() {
-
+    static async findById(id) {
+        // my have security issue - SQL Injection
+        const { rows } = await pool.query(`
+            SELECT * FROM users WHERE id = ${id}
+        `);
+        return rows;
     }
 
     static async update() {
