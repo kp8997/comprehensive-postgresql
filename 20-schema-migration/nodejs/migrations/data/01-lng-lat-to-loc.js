@@ -3,7 +3,7 @@ const pg = require('pg');
 const pool = new pg.Pool({
     host: 'localhost',
     port: 5432,
-    database: 'comprehensive-postgresql-social-network',
+    database: 'comprehensive_postgresql_social_network',
     user: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
 });

@@ -1,4 +1,4 @@
-flyway.url=jdbc:postgresql://localhost:5432/comprehensive-postgresql-social-network
+flyway.url=jdbc:postgresql://localhost:5432/comprehensive_postgresql_social_network
 flyway.user=admin_migration
 flyway.password=
 

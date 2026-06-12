@@ -1,5 +1,5 @@
 -- run this before doing migration
--- createdb comprehensive-postgresql-social-network 
+-- createdb comprehensive_postgresql_social_network 
 
 CREATE TABLE comments (
     id SERIAL PRIMARY KEY,
