@@ -24,7 +24,6 @@
 4. multiple unique will behave exact as composite key, only throw error when values of 2 fields are the same
     
 
-
 e.g:
 at creation
 CREATE TABLE project_assignments (
@@ -55,4 +54,3 @@ ALTER TABLE products
     ALTER COLUMN price SET NOT NULL,
     ADD CONSTRAINT uq_product_code UNIQUE (product_code),
     ADD CONSTRAINT chk_positive_price CHECK (price > 0);
-
