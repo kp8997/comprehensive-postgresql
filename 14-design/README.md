@@ -39,4 +39,3 @@ id user_id post_id
 
 comment_likes
 id user_id comment_id
-
