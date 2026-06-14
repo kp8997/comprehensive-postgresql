@@ -1,56 +1,56 @@
-With as alias_name ( 
-	query
+With as alias_name (
+query
 )
 
 Select
-	(function + column) column as alias
-	aggregate
-	subquery
-	distinct
-	utility: 
-		greatest, 
-		least, 
-		case when … then … when … then … end 
+(function + column) column as alias
+aggregate
+subquery
+distinct
+utility:
+greatest,
+least,
+case when … then … when … then … end
 
-From 
-	table
-	subquery
+From
+table
+subquery
 
 Where
-	condition: >, >=, <, <=, =, <>, IN, NOT IN, LIKE
-	subquery
+condition: >, >=, <, <=, =, <>, IN, NOT IN, LIKE
+subquery
 
 Join
-	table1 ON field1 = field2
-	join table2
-		on field1 = field2 and field3 =field 4
+table1 ON field1 = field2
+join table2
+on field1 = field2 and field3 =field 4
 
 Group by
-	column
+column
 
 Order by
-	column
+column
 
-Limit 
-	number
+Limit
+number
 
 Offset
-	number
+number
 
 Subquery (
-	Select
-	
-	From
+Select
+From
 
-	Where
+    Where
 
-	Join
+    Join
 
-	Group by
-	
-	Order by
+    Group by
 
-	Limit 
+    Order by
 
-	Offset
+    Limit
+
+    Offset
+
 )
