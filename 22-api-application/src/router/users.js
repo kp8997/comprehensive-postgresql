@@ -22,7 +22,6 @@ router.put('/users/:id', async (req, res) => {
     const { username, bio } = req.body;
 
     const { id } = req.params;
-    console.log("id: ", id);
 
     if (id) {
         const user = await UserRepo.update(id, username, bio);
@@ -37,6 +36,20 @@ router.put('/users/:id', async (req, res) => {
 });
 
 router.delete('/users/:id', async (req, res) => {
+
+    const { id } = req.params;
+
+    if (id) {
+        const user = await UserRepo.delete(id);
+
+        if (user) {
+            return res.send(user);
+        } else {
+            return res.status(404).send('User not found');
+        }
+    }
+
+    return res.send('id is not provided');
 
 });
 

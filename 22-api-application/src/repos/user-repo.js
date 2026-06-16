@@ -33,7 +33,6 @@ class UserRepo {
     static async delete(id) {
         const { rows } = await pool.query(`DELETE FROM users WHERE id = $1 returning *`, [id]);
         return rows;
-
     }
 
 }
