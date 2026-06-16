@@ -13,8 +13,8 @@ class Pool {
     }
 
     // TEMP - because it has security issues
-    query(sql) {
-        return this._pool.query(sql);
+    query(sql, params) {
+        return this._pool.query(sql, params || []);
     }
 }
 

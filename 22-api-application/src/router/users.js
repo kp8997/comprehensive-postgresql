@@ -9,11 +9,13 @@ router.get('/users', async (req, res) => {
 
 router.get('/users/:id', async (req, res) => {
     const user = await UserRepo.findById(req.params.id);
-    res.send(users);
+    res.send(user);
 });
 
 router.post('/users', async (req, res) => {
-
+    const { username, bio } = req.body;
+    const user = await UserRepo.insert(username, bio);
+    res.send(user);
 });
 
 router.put('/users/:id', async (req, res) => {
