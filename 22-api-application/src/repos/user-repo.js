@@ -25,11 +25,14 @@ class UserRepo {
         return rows;
     }
 
-    static async update() {
-
+    static async update(id, username, bio) {
+        const { rows } = await pool.query(`UPDATE users SET username = $2, bio = $3 WHERE id = $1 returning *`, [id, username, bio]);
+        return rows;
     }
 
-    static async delete() {
+    static async delete(id) {
+        const { rows } = await pool.query(`DELETE FROM users WHERE id = $1 returning *`, [id]);
+        return rows;
 
     }
 
