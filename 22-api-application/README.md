@@ -21,3 +21,13 @@ Leverage the schema feature of postgresql to isolate the test files, create, cle
     SELECT * FROM test.users;
     -- Result: table test.users does not exist
         
+    SHOW search_path;
+
+Step for isolate the schema for testing
+    Randomly generating a role name to connect to PG
+    Connect to PG as usual (use normal account)
+    Create a new role
+    Create a new schema
+    Disconnect from PG
+    Run migration for the new schema
+    Connect to PG as new created role
