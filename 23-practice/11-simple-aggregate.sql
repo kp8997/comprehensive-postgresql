@@ -3,3 +3,7 @@
 select joindate as latest from cd.members
 ORDER by joindate desc
 LIMIT 1;
+
+
+-- select max(joindate) as latest
+-- 	from cd.members;

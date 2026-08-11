@@ -4,12 +4,10 @@ query
 
 Select
 (function + column) column as alias
-aggregate
-subquery
+aggregate: group, min, max, count, avg
+subquery: select ...
 distinct
-utility:
-greatest,
-least,
+utility: greatest, least
 case
     when condition: then value
     when … then …
