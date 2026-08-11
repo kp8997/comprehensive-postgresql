@@ -10,7 +10,7 @@ distinct
 utility:
 greatest,
 least,
-case when … then … when … then … end
+case when … then … when … then … else ... end
 
 From
 table
