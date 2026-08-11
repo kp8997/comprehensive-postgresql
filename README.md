@@ -77,4 +77,11 @@ From
     table level is able to specify name of constraint
     column level automatically named by postgresql
 
+5 actions of constraint on delete or update
+    NO ACTION
+    RESTRICT
+    CASCADE
+    SET NULL
+    SET DEFAULT
+
 ================================

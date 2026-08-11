@@ -4,11 +4,9 @@
     NOT NULL
     UNIQUE
     CHECK
+    DEFAULT
 
-2. Fallback 
-    default
-
-3. 4 ways to to add constraint
+2. 4 ways to to add constraint
     At creation
         table level
             add constraint: foreign, primary, check, unique
@@ -21,8 +19,11 @@
             column level
                 set not null
 
-4. multiple unique will behave exact as composite key, only throw error when values of 2 fields are the same
+3. multiple unique will behave exact as composite key, only throw error when values of 2 fields are the same
     
+4.  not null and default use with set keyword and only available on column level
+    4 other types can use with both table and column level
+
 
 e.g:
 at creation
@@ -52,5 +53,6 @@ after created
 ALTER TABLE products
     ALTER COLUMN product_code SET NOT NULL,
     ALTER COLUMN price SET NOT NULL,
+    ALTER COLUMN weight SET DEFAULT 0,
     ADD CONSTRAINT uq_product_code UNIQUE (product_code),
     ADD CONSTRAINT chk_positive_price CHECK (price > 0);
