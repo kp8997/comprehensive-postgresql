@@ -56,3 +56,25 @@ From
     Offset
 
 )
+
+================================
+
+5 types of constraint
+    primary
+    foreign
+    check
+    not null
+    unique
+
+4 ways to add constraint
+    at creation
+        table level
+        column level
+    after creation
+        table level
+        column level
+
+    table level is able to specify name of constraint
+    column level automatically named by postgresql
+
+================================
