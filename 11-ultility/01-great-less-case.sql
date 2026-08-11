@@ -2,8 +2,8 @@ SELECT name, GREATEST(price * 2, 30) AS shipping_fee FROM products;
 
 SELECT name, LEAST(price * 0.5, 400, 30) AS shipping_fee FROM products;
 
-SELECT 
-    name, 
+SELECT
+    name,
     price,
     CASE
         WHEN price > 600 THEN 'high'
