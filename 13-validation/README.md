@@ -19,10 +19,18 @@
             column level
                 set not null
 
-3. multiple unique will behave exact as composite key, only throw error when values of 2 fields are the same
-    
+3. actions on delete and update for foreign key
+    NO ACTION
+    RESTRICT
+    CASCADE
+    SET NULL
+    SET DEFAULT
+
 4.  not null and default use with set keyword and only available on column level
     4 other types can use with both table and column level
+    we can think of null and default of actions are different from constraint
+
+5. multiple unique will behave exact as composite key, only throw error when values of 2 fields are the same
 
 
 e.g:
