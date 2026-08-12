@@ -35,7 +35,7 @@ select mems.firstname || ' ' || mems.surname as member,
                 inner join cd.facilities facs
                         on bks.facid = facs.facid
         where
-		bks.starttime >= '2012-09-14' and 
+		bks.starttime >= '2012-09-14' and
 		bks.starttime < '2012-09-15' and (
 			(mems.memid = 0 and bks.slots*facs.guestcost > 30) or
 			(mems.memid != 0 and bks.slots*facs.membercost > 30)
