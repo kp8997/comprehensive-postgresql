@@ -3,3 +3,8 @@
 select count(distinct memid) from cd.bookings;
 
 -- remember that count + distinct are able to mix together
+
+
+-- answer
+select count(*) from 
+	(select distinct memid from cd.bookings) as mems
