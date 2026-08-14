@@ -21,6 +21,10 @@ order by rank,
   firstname,
   surname
 -- answer
+
+-- we can also use integer directly, without round() because they automatically round but floor when in a half value,
+-- so we have to add more 10 to make it round up
+
 select firstname,
   surname,
   hours,
